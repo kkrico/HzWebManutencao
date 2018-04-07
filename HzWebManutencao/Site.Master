@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="HzWebManutencao.SiteMaster" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/modalBackground.css" rel="stylesheet" type="text/css" />
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+ <%--       <Services>
+            <asp:ServiceReference Path="~/DynamicPopulate.asmx" />
+        </Services>--%>
+    </asp:ScriptManager>                
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    Horizon WEB
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        <span class="bold"><%if (Session["login"] != null) Response.Write("Usuário: " + ((HzLibGeneral.Util.HzLogin)Session["login"]).cmpDcEmail);%></span>
+                        <br><% Response.Write("Data: " + DateTime.Now.ToString("dd/MM/yyyy") + " " + DateTime.Now.ToString("HH:mm")); %></br>
+                    </AnonymousTemplate>
+                </asp:LoginView>
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" Width="1100px"
+                    IncludeStyleBlock="False" Orientation="Horizontal">
+                    <DynamicMenuStyle BackColor="#FFFFFF" BorderColor="" CssClass="dynamicMenu" VerticalPadding="0px" HorizontalPadding="0px" />
+                    <DynamicMenuItemStyle CssClass="dynamicMenuItem" width="980px" Font-Size="5pt" ForeColor="#8D4F59" />
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
