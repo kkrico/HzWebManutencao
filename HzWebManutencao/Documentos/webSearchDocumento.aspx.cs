@@ -275,7 +275,5 @@ namespace HzWebManutencao.Documentos
                 Label4.Text = ex.Message + " -- " + dir;
             }
         }
-
-       
     }
 }
