@@ -119,7 +119,7 @@ first child of the left and right table columns */
 .main
 {
     padding: 0px 12px;
-    margin: 12px 8px 8px 208px;
+    margin: 12px 8px 8px 8px;
     min-height: 420px;
     width: 936px;
 }

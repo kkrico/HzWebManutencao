@@ -12,12 +12,18 @@ using System.Data;
 using HzLibConnection.Data;
 using HzClasses.Numeracao;
 using System.IO;
+using System.Web.Services;
 
 namespace HzWebManutencao.Documentos
 {
     public partial class WebNovoDocumento : System.Web.UI.Page
     {
-     
+        [WebMethod]
+        public object DoAlgo()
+        {
+            return new { Data = "Foo" };
+        }
     }
+
+
 }
-        

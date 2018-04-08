@@ -140,6 +140,7 @@
     <Content Include="App_Themes\General\Vizualizar.jpg" />
     <Content Include="App_Themes\General\word.png" />
     <Content Include="App_Themes\Menu.ContextMenu.css" />
+    <Content Include="Styles\simple-grid.min.css" />
     <Content Include="ATE\App_Themes\General\ajax-loader.gif" />
     <Content Include="ATE\App_Themes\General\page_white_acrobat.gif" />
     <Content Include="ATE\App_Themes\General\printer.gif" />
